@@ -1,17 +1,17 @@
-# File Input React
+# Slider Input React
 
-File Input React is a file input component for your react application.
-Below are the simple steps for installing and using File Input React.
+Slider Input React is a slider input component for your react application.
+Below are the simple steps for installing and using Slider Input React.
 
 
 ## `Latest version`
 
-1.0.5
+1.0.0
 
 
 ## `How to install`
 
-npm install file-input-react
+npm install slider-input-react
 
 
 ## `How to use`
@@ -19,39 +19,71 @@ npm install file-input-react
 ### `Import`
 
 ```
-import { FileInputReact } from "file-input-react";
+import { SliderInputReact } from "slider-input-react";
 
 ```
 
 ### `Render basic component`
 
 ```
-<FileInputReact />
+<SliderInputReact />
 ```
 
 ### `Render component with props`
 
 ```
-<FileInputReact
-    button="Submit"
-    label="Upload file"
-    hideInput
-    handleChange={this.fileChangeHandler}
-    handleSubmit={this.submitHandler}
-/>
+import React, { Component } from 'react'
+import './App.css';
+import SliderInputComponent from './components/index'
+
+export class App extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       value:10,
+       min:0,
+       max:100
+    }
+  }
+  
+
+  changeHandler=(e)=>{
+    this.setState({
+      value:e.target.value
+    })
+  }
+
+  render() {
+    const {min, max, value}=this.state;
+    return (  
+      <div className="App">
+        <SliderInputComponent
+          min={min}
+          max={max}
+          value={value}
+          changeHandler={this.changeHandler}
+        ></SliderInputComponent>
+      </div>
+    )
+  }
+}
+
+export default App
+
 ```
 
 
 ## `Home page`
 
-[https://github.com/Official-Rahul/file-input-react](https://github.com/Official-Rahul/file-input-react)
+[https://github.com/Official-Rahul/slider-input-react](https://github.com/Official-Rahul/slider-input-react)
 
 
 ## `Github Repo`
 
-[https://github.com/Official-Rahul/file-input-react](https://github.com/Official-Rahul/file-input-react)
+[https://github.com/Official-Rahul/slider-input-react](https://github.com/Official-Rahul/slider-input-react)
 
 
 ## `Npm link`
 
-[https://www.npmjs.com/package/file-input-react](https://www.npmjs.com/package/file-input-react)
+[https://www.npmjs.com/package/slider-input-react](https://www.npmjs.com/package/slider-input-react)
