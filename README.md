@@ -6,7 +6,7 @@ Below are the simple steps for installing and using Slider Input React.
 
 ## `Latest version`
 
-1.0.0
+1.0.2
 
 
 ## `How to install`
@@ -34,7 +34,7 @@ import { SliderInputReact } from "slider-input-react";
 ```
 import React, { Component } from 'react'
 import './App.css';
-import SliderInputComponent from './components/index'
+import SliderInputComponent from './components/index';
 
 export class App extends Component {
   constructor(props) {
